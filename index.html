@@ -308,7 +308,7 @@ function render(W){
   store.get(KEY).then(v=>{ta.value=v||'';});
   document.getElementById('save').onclick=async()=>{await store.set(KEY,ta.value);const s=document.getElementById('saved');s.classList.add('show');setTimeout(()=>s.classList.remove('show'),1800);};
 }
-
+ 
 // seletor de semana
 const sel=document.getElementById('wk');
 WEEKS.forEach((w,i)=>{const o=document.createElement('option');o.value=i;o.textContent=w.label;sel.appendChild(o);});
